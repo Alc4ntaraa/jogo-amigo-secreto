@@ -31,6 +31,13 @@ function atualizarLista() {
     }
 }
 
+function sortearAmigo(){
+    if (amigos.length == 0) { 
+    alert('Por favor, adicione pelo menos um nome antes de sortear.')
+    return // para a função aqui, nada mais acontece
+  }
 
-
-    
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length)
+    const amigoSorteado = amigos[indiceAleatorio]
+    document.getElementById('resultado').innerHTML = `O amigo sorteado é: <strong>${amigoSorteado}</strong>`
+    }
